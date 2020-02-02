@@ -1,0 +1,44 @@
+<% include ./partials/header %>
+
+    <title><%= selectedNews.title %> | Lawn care | Lawnamental</title>
+    <meta name="keywords" content="<%= selectedNews.title %>">
+</head>
+
+<body>
+    <% include ./partials/nav %>
+    <main class="news-page">
+        <div class="news-page__feature" style="background-image: url('<%= selectedNews.mainImageUrl %>')">
+            <h1 class="news-page__header"><%= selectedNews.title %></h1>
+        </div>
+
+        <div class="news-page__text">
+            <% selectedNews.contentList.forEach(function(content) { %>
+                <% if(content.type == "text") { %>
+                    <p> <%= content.content %> </p>
+                <% } %>
+            <% }) %>
+        </div>
+        <div class="u-container news-page__container">
+            <% selectedNews.contentList.forEach(function(content) { %>
+                <div class="news-page__content">
+                    <% switch( content.type ) {
+                        case "image": %>
+                            <img class="news-page__image" src="<%= content.content %>" alt="news content image"/>
+                            <% break; %>
+                        <% case "video": %>
+                            <% let fileType = content.content %>
+                            <% fileType = fileType.substr(id.length - 5) %>
+                            <video class="news-page__video" width=100% height=auto playsinline autoplay muted>
+                                <source src="<%= content.content %>" type="video/<%= fileType %>">
+                                Your browser does not support the video tag.
+                            </video>
+                            <% break; %>
+                        <% default: %>
+                    <% } %>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+
+    <% include ./partials/footer %>
+</body>

@@ -1,0 +1,151 @@
+<% var count = 1; %>
+
+<% include ./partials/header %>
+
+    <title>Lawnamental | Lawn care | Wales | South-west</title>
+    <meta name="description" content="Specialised lawn care">
+    <meta name="keywords" content="Lawn care, Franchise">
+</head>
+
+<body>
+    <p class="ieError">You are using an <strong>outdated</strong> browser (not updated since 2014). Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience. Take advantage of the latest technology like we do!</p>
+    <% include ./partials/nav %>
+
+    <header class="header">
+        <div class="header__box">
+            <h1 class="heading-primary">
+                <div class="heading-primary__logo">
+                    <img src="resources/img/logo-text-white.png">
+                </div>
+                <span class="heading-primary__subtext">The Ornamental Lawn Specialists</span>
+            </h1>
+
+            <div class="header-buttons-box">
+                <a href="#contact-us" class="btn btn--red btn--animated">Talk to us!</a>
+                <a href="#landing-about" class="btn btn--white btn--animated">Tell me more</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="landing-about" class="section section-about">
+            <h2 class="section-about__header heading-secondary">A beautiful home needs a beautiful garden</h2>
+            <div class="section-about__grid u-container">
+                <div class="section-about__about-us">
+                    <h3 class="section-about__sub-header heading-tertiary">Who are Lawnamental?</h3>
+                    <p>As specialists in creating elegant, ornamental lawns, we can rescue and rejuvenate a tired, worn-out lawn and bring it back to perfect health or design and lay a fresh, brand-new lawn. We can also treat and maintain any lawn to ensure your grass keeps its luxurious appearance.</p>
+                </div>
+                <div class="section-about__what-to-expect">
+                    <h3 class="section-about__sub-header heading-tertiary">What to expect?</h3>
+                    <p>The elements don't always cooperate (especially in the U.K), but at Lawnamental we strive to meet and exceed our customer’s expectation; you deserve nothing less. Complete customer satisfaction with unmatched personal attention is our goal, which is achieved through reliable professional lawn care services, highly skilled staff and extensive experience.</p>
+                </div>
+                <div class="section-about__learn-more">
+                    <a href="/about" class="btn-text">Learn more <i class="ion-arrow-right-c"></i></a>
+                </div>
+                <div class="section-about__images">
+                    <div class="composition">
+                        <img src="/resources/img/about-1.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img src="/resources/img/about-2.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                        <img src="/resources/img/about-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-features">
+            <h2 class="section-features__header heading-secondary">What we recommend</h2>
+            <p class="section-features__text u-container-small">Lawnamental offers complete lawn care services to South Wales, West Wales and the surrounding areas. All the details are covered from lawn design to turfing and weed control. We carefully plan the work and execute the plan, making adjustments where needed along the way to ensure enjoyment and appreciation for years to come.</p>
+
+            <div id="svgContainer1" class="svgContainer" style="margin: 50px 50px;">
+                <svg id="svg-feature-1" width="0" height="0" >
+                        <path
+                            id="svg-feature-1-path"
+                            d="M0 0"
+                            stroke-width="0.2rem"
+                            style="stroke:#77777762; fill:none;  "/>
+                </svg>
+            </div>
+            <div id="svgContainer2" class="svgContainer" style="margin: 50px 50px;">
+                <svg id="svg-feature-2" width="0" height="0" >
+                        <path
+                            id="svg-feature-2-path"
+                            d="M0 0"
+                            stroke-width="0.2rem"
+                            style="stroke:#77777762; fill:none;  "/>
+                </svg>
+            </div>
+            <div id="svgContainer3" class="svgContainer" style="margin: 50px 50px;">
+                <svg id="svg-feature-3" width="0" height="0" >
+                        <path
+                            id="svg-feature-3-path"
+                            d="M0 0"
+                            stroke-width="0.2rem"
+                            style="stroke:#77777762; fill:none;  "/>
+                </svg>
+            </div>
+
+            <div class="u-container section-features__grid">
+                <div id="season1" class="section-features__title" style="background-image: url('/resources/img/winter.png')">Winter</div>
+                <div id="season1-txt" class="section-features__details">
+                    <p>During the winter, it’s important to leave grass longer than normal to protect it from harsh weather conditions. Keeping it clear of leaves etc, is also important as this can cause more damage. Early winter is a great time to <a href="/services/Moss-Treatment">moss treatment</a>.  This will help keep your lawn healthy ready for the next season. Giving you a better-looking lawn going into spring</p>
+                </div>
+                <div id="season2-txt" class="section-features__details section-features__details--alt">
+                    <p>Early spring is when we will start to <a href="/services/Mowing">mow</a> and treat your lawn. Its best just to trim the top of the lawn at first. As spring moves forward, we will <a href="/services/Scarifying">scarify</a> and <a href="/services/Mowing">cut</a> your lawn accordingly. As summer approaches we will start to <a href="/services/Fertilization">fertilise</a> and <a href="/services/Mowing">cut</a> your lawn. Giving it a great healthy-looking appearance.</p>
+                </div>
+                <div id="season2" class="section-features__title section-features__title--alt" style="background-image: url('/resources/img/spring.png')">Spring</div>
+                <div id="season3" class="section-features__title" style="background-image: url('/resources/img/summer.png')">Summer</div>
+                <div id="season3-txt"  class="section-features__details">
+                    <p>One of the most important times of the year to look after your garden. Keeping your garden moist and treated will help it be resilient to drought. We can use wetting agents and <a href="/services/Aeration">aeration</a> to help your grass during this time. We will monitor the condition of your lawn and recommend any additional treatments needed.</p>
+                </div>
+                <div id="season4-txt"  class="section-features__details section-features__details--alt">
+                    <p>Autumn is a great time to rectify any issues with your lawn. Moisture levels are high which can cause issues with lawn fungi and other contaminants. We can treat this with chemicals and <a href="/services/Scarifying">scarifying</a>. It’s also a good time to over seed your garden giving you a thicker lawnamental garden.</p>
+                </div>
+                <div id="season4" class="section-features__title section-features__title--alt" style="background-image: url('/resources/img/autumn.png')">Autumn</div>
+            </div>
+        </section>
+
+        <section id="services" class="section section-services">
+            <h2 class="section-services__header heading-secondary heading-secondary--inverse">Treatments we can offer</h2>
+            <p class="section-services__text u-container-small">We use the latest equipment and techniques to maximise the potential of your lawn</p>
+            <div class="section-services__grid">
+                <% count = 0; %>
+                <% services.forEach(function(service) { %>
+                    <% count += 1; %>
+                    <a href="<%=((service.nurtured) ? 'https://www.naturalgroundcare.co.uk' : '');%>/services/#<%= service.serviceName.replace(' ','-') %>" class="card--services card--services--<%=((count%2 == 0) ? 'right' : 'left');%> <%=((service.nurtured) ? 'card--services--alt' : '') %>" style="background-image: url('<%= service.landingPageImagePath %>')">
+                        <div class="card--services__sub-header"> <%= service.serviceName %> </div>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
+
+        <section id="casestudies" class="section section-cases">
+            <h2 class="section-cases__header heading-secondary">Our work</h2>
+            <p class="section-cases__text u-container-small">We are proud of our work and catalog as we go to ensure you are happy with the results.</p>
+
+            <div class="casestudies-slider js--casestudies-slider">
+                <% count = 0; %>
+                <% cases.forEach(function(caseItem) { %>
+                    <% let titleLink = String(caseItem.title) %>
+                    <% titleLink = titleLink.replace(' ','-') %>
+                    <a href="/news/<%= titleLink %>" class="card--swivel">
+                        <div class="card--swivel__side card--swivel__side--front" style="background-image: url('<%= caseItem.mainImageUrl %>')">
+                            <!-- just need background picture -->
+                        </div>
+                        <div class="card--swivel__side card--swivel__side--back">
+                            <div class="section-cases__item">
+                                <div class="section-cases__item__title">
+                                    <%= caseItem.title %>
+                                </div>
+                                <div class="section-cases__item__description">
+                                    <%= caseItem.summaryText %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <% include ./partials/footer %>
+    <script src="/vendors/svgDraw/svg.draw.js"></script>
+</body>

@@ -1,0 +1,26 @@
+
+/*    Header block    */
+/* ------------------ */
+.header {
+    z-index: 1000;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,0.2),
+        rgba($color-primary-dark,0.2)),
+    url("../img/hero.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    // clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+
+    &__box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+/* ------------------ */

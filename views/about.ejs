@@ -1,0 +1,78 @@
+<% include ./partials/header %>
+
+    <title>About Us | Lawnamental | Lawn care | franchise available</title>
+    <meta name="description" content="Specialised lawn care">
+    <meta name="keywords" content="Lawn care, Franchise">
+</head>
+
+<body>
+    <% include ./partials/nav %>
+
+    <main>
+        <h1 class="heading-secondary heading-subpage-primary about-page__header">About Lawnamental</h1>
+        <div class="about-page__info about-page__info--left u-container">
+            <div class="about-page__info__text about-page__info__text">
+                <h3 class="heading-tertiary about-page__info__header">Who are Lawnamental?</h3>
+                <p>
+                    A beautiful home needs a beautiful garden. A luscious and green, perfectly sculpted, expertly maintained open-air extension for your home.
+                </br></br>
+                    Lawnamental can realise this vision for you. As specialists in creating elegant, ornamental lawns, we can rescue and rejuvenate a tired, worn-out lawn and bring it back to perfect health or design and lay a fresh, brand-new lawn. We can also treat and maintain any lawn to ensure your grass keeps its luxurious appearance.
+                </p>
+            </div>
+            <div class="about-page__info__image">
+                <img src="resources/img/perfect-grass.jpg" alt="who picture"></img>
+            </div>
+        </div>
+
+        <div class="about-page__info about-page__info--right u-container">
+            <div class="about-page__info__image">
+                <img src="resources/img/wet-grass.jpg" alt="wet"></img>
+            </div>
+            <div class="about-page__info__text about-page__info__text">
+                <h3 class="heading-tertiary about-page__info__header">What to expect?</h3>
+                <p>
+                    The elements don't always cooperate (especially in the U.K), but at Lawnamental we strive to meet and exceed our customer’s expectation; you deserve nothing less. Complete customer satisfaction with unmatched personal attention is our goal, which is achieved through reliable professional lawn care services, highly skilled staff and extensive experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-page__info about-page__info--left u-container">
+            <div class="about-page__info__image">
+                <img src="resources/img/wales.jpg" alt="coverage image"></img>
+            </div>
+            <div class="about-page__info__text about-page__info__text">
+                <h3 class="heading-tertiary about-page__info__header">Where are we located?</h3>
+                <p>
+                    Lawnamental was founded by <a target="_blank" href="https://www.naturalgroundcare.co.uk">Natural Groundcare</a> and is based in south Wales, U.K
+                    </br></br>
+                    As lawnamental grows, so will the areas we service.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-page__info about-page__info--right u-container">
+            <div class="about-page__info__text about-page__info__text">
+                <h3 class="heading-tertiary about-page__info__header">Our history</h3>
+                <p>
+                    Lawnamental was founded in 2018 and is the lawn care division of <a target="_blank" href="https://www.naturalgroundcare.co.uk">Natural Groundcare</a>. With over 20 years of experience in ornamental lawn care and landscaping, we have the expertise to provide you with the best services and outcome.
+                </p>
+            </div>
+            <div class="about-page__info__image">
+                <img src="resources/img/history.png" alt="who picture"></img>
+            </div>
+        </div>
+
+        <div role="complementary" class="about-page__testimonials no-fouc">
+            <div class="quotes white-back u-container">
+                <% testimonials.forEach(function(testimonial) { %>
+                    <blockquote class="quotes__quote">
+                        <p><%= testimonial.testimonial %></p>
+                        <cite><%= testimonial.name %></cite>
+                    </blockquote>
+                <% }) %>
+            </div>
+        </div>
+    </main>
+
+    <% include ./partials/footer %>
+</body>

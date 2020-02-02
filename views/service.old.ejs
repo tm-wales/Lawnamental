@@ -1,0 +1,38 @@
+<% include ./partials/header %>
+
+    <title><%= selectedService.serviceName %> | Lawn care | Lawnamental</title>
+    <meta name="description" content="<%= selectedService.shortDescription %>">
+    <meta name="keywords" content="<%= selectedService.serviceName %>">
+</head>
+
+<body>
+    <% include ./partials/nav %>
+    <main class="service-page">
+        <div class="service-page__feature" style="background-image: url('<%= selectedService.featurePath %>')">
+            <h1 class="service-page__header"><%= selectedService.serviceName %></h1>
+        </div>
+
+        <div class="u-container-small">
+            <div class="service-page__text service-page__section">
+                <p><%= selectedService.serviceText %></p>
+            </div>
+
+            <img class="service-page__secondImage service-page__section" src="<%= selectedService.secondFeaturePath %>" alt="Secondary image">
+
+            <div class="service-page__text service-page__section">
+                <p><%= selectedService.secondaryServiceText %></p>
+            </div>
+        </div>
+        <div class="section-services__grid--page">
+            <% count = 0; %>
+            <% services.forEach(function(service) { %>
+                <% count += 1; %>
+                <a href="<%=((service.nurtured) ? 'https://www.nurturedlandscapes.co.uk' : '');%>/services/<%= service.serviceName.replace(' ','-') %>" class="card--services card--services--page card--services--<%=((count%2 == 0) ? 'right' : 'left');%> <%=((service.nurtured) ? 'card--services--alt' : '') %>" style="background-image: url('<%= service.landingPageImagePath %>')">
+                    <div class="card--services__sub-header"> <%= service.serviceName %> </div>
+                </a>
+            <% }) %>
+        </div>
+    </main>
+
+    <% include ./partials/footer %>
+</body>

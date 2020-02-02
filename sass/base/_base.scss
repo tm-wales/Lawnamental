@@ -1,0 +1,42 @@
+
+/*        Base        */
+/* ------------------ */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // defines what 1 rem is
+    background-color: white;
+
+    @include respond-stage5 {
+        font-size: 50%;
+    }
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    // margin: 3rem;
+    background-color: $color-background-light;
+    color: #777;
+}
+
+button {
+    border-color: black;
+    background-color: white;
+    padding: .8rem;
+}
+
+button:focus {
+    outline: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+/* ------------------ */

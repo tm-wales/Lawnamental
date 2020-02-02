@@ -1,0 +1,134 @@
+
+/* Main typography settings */
+/* ------------------ */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 1.6rem;
+}
+/* ------------------ */
+
+/* h1 heading primary */
+/* ------------------ */
+.heading-primary {
+    color: $color-white;
+
+    &__logo img {
+        height: 10rem;
+        width: auto;
+
+        animation: moveInLeft 1s ease-out .25s;
+        animation-fill-mode: backwards;
+        backface-visibility: hidden;
+
+        @include respond-stage4 {
+            height: 8rem;
+        }
+
+        @include respond-stage6 {
+            height: 6rem;
+        }
+
+        @include respond-stage7 {
+            height: 5rem;
+        }
+    }
+
+    &__subtext {
+        display: block;
+        font-weight: 400;
+        font-size: 3rem;
+
+        animation: moveInRight 1s ease-out .25s;
+        animation-fill-mode: backwards;
+        backface-visibility: hidden;
+
+        @include respond-stage6 {
+            font-size: 2.5rem;
+        }
+    }
+}
+/* ------------------ */
+
+/* h2 heading secondary */
+/* ------------------ */
+.heading-secondary {
+    color: $color-primary;
+    background-color: transparent;
+    position: relative;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 4rem;
+
+    @supports (display:grid) {
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, rgba($color-primary-dark,.8), rgba($color-primary-light,.8));
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.4);
+        transition: none;
+    }
+
+    &:hover::after {
+        width: 120%;
+        background-color: rgba(255,255,255,0);
+        transition: all 1.5s ease-out;
+    }
+
+    &--inverse {
+        color: $color-white;
+        @supports (display:grid) {
+            background-image: linear-gradient(to right, $color-white, $color-white);
+        }
+        
+
+        &::after {
+            @supports (display:grid) {
+                background-color: rgba($color-primary-dark,0.3);
+            }
+        }
+
+        &:hover::after {
+            @supports (display:grid) {
+                background-color: rgba($color-primary,0);
+            }
+        }
+    }
+}
+/* ------------------ */
+
+/* h2 heading secondary */
+/* ------------------ */
+.heading-tertiary {
+    font-size: 1.8rem;
+    color: $color-primary-dark;
+    padding-bottom: 1rem;
+    &::after {
+        display: block;
+        height: .2rem;
+        background-color: $color-secondary;
+        content: " ";
+        width: 20%;
+        margin: 0.7rem 0;
+    }
+}
+
+.heading-subpage-primary {
+    padding-top: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* ------------------ */

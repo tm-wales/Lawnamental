@@ -1,0 +1,31 @@
+.quotes blockquote p {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 25px;
+	font-size: 1.25em;
+	font-style: italic;
+	text-align: center;
+}
+.quotes cite {
+	font-size: 1em;
+	float: right;
+	font-style: normal;
+}
+.quotes cite a {
+	font-style: italic;
+	text-decoration: none;
+	font-size: .85rem;
+}
+
+/* A custom cursor to let folks know they can drag things */
+.quotes blockquote p {
+	cursor: -webkit-grab;
+}
+
+.no-fouc {
+	display: none;
+}
+
+.slick-dots li button {
+	color: white;
+}

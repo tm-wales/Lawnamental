@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+    <title> Services | Lawn care | Lawnamental</title>
+    <meta name="description" content="Lawnamental Services">
+</head>
+
+<body>
+    <% include ./partials/nav %>
+    <main class="service-page">
+        <h1 class="heading-secondary heading-subpage-primary about-page__header">Lawnamental Services</h1>
+        <% let count = 0 %>
+        <% services.forEach(function(service) { %>
+            <% count += 1; %>
+            <div id="<%=service.serviceName.replace(' ','-') %>" class="service-page__service <%= ((count % 2 == 0) ? 'service-page__service--left' : 'service-page__service--right') %> u-container">
+                <div class="service-page__service__textbox">
+                    <h3 class="heading-tertiary service-page__service__header"> <%= service.serviceName %></h3>
+                    <p>
+                        <%= service.serviceText %>
+                    </p>
+                </div>
+                <img class="service-page__service__image" src="<%=service.landingPageImagePath %>" alt="<%= service.serviceName %>">
+            </div>
+
+        <% }) %>
+    </main>
+
+    <% include ./partials/footer %>
+</body>

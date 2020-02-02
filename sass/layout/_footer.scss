@@ -1,0 +1,138 @@
+/*       Footer       */
+/* ------------------ */
+    .footer {
+        position: relative;
+        display: grid;
+        color: $color-grey-light;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+        padding-top: 10rem;
+        overflow: hidden;
+        text-align: left;
+
+        &__container {
+            background-color: $color-footer;
+            padding: 5rem;
+        }
+
+        &__backImage {
+            position: absolute;
+            top: 1rem;
+            left: -1rem;
+            height: 15rem;
+        }
+
+        &__grid {
+            color: $color-white;
+            display: grid;
+            margin-top: 8rem;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            height: 100%;
+            grid-gap: 1.5rem;
+            align-items: center;
+            grid-template-areas: "header header"
+                                 "text text"
+                                 "time address"
+                                 "phone address"
+                                 "email address"
+                                 "social social"
+                                 "nav nav"
+                                 "copy copy";
+
+            @include respond-stage6 {
+                grid-template-columns: 1fr;
+
+                grid-template-areas: "header"
+                                     "text"
+                                     "time"
+                                     "phone"
+                                     "email"
+                                     "address"
+                                     "social"
+                                     "nav"
+                                     "copy";
+            }
+        }
+
+        &__header {
+            grid-area: header;
+            color: $color-white;
+            font-size: 3rem;
+        }
+
+        &__text {
+            grid-area: text;
+        }
+
+        &__times {
+            grid-area: time;
+        }
+
+        &__address {
+            grid-area: address;
+        }
+
+        &__phone {
+            grid-area: phone;
+        }
+
+        &__email {
+            grid-area: email;
+        }
+
+        &__social {
+            grid-area: social;
+
+            li {
+                display: inline-block;
+                font-size: 2.5rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &__navigation {
+            grid-area: nav;
+        }
+
+        &__copyright {
+            grid-area: copy;
+            font-size:  1.2rem;
+        }
+
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            display: inline-block;
+            font-size:  1.2rem;
+            text-align: center;
+
+            &:not(:last-child) {
+                padding-right: 1rem;
+                border-right: 1px solid $color-white;
+            }
+
+            &:not(:first-child) {
+                padding-left: .5rem;
+            }
+        }
+
+        &__link {
+            &:link,
+            &:visited {
+                display:inline-block;
+                color: $color-white;
+                text-decoration: none;
+                transition: all .3s;
+            }
+
+            &:hover,
+            &:active {
+                color: $color-primary-light;
+            }
+        }
+    }
+/* ------------------ */

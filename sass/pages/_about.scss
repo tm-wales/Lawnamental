@@ -1,0 +1,94 @@
+
+.about-page {
+    &__header {
+        @include respond-stage3-1 {
+            padding-top: 13rem;
+        }
+    }
+}
+.about-page__info {
+    display: block;
+    display: grid;
+    padding-bottom: 5rem;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 5rem;
+    width: 80%;
+    justify-content: center;
+
+    @include respond-stage3-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-stage3-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    &--left {
+        grid-template-areas: "t t i";
+
+        @include respond-stage3-1 {
+            grid-template-areas: "t i";
+        }
+
+        @include respond-stage3-2 {
+            grid-template-areas: "t" "i";
+        }
+    }
+
+    &--right {
+        grid-template-areas: "i t t";
+
+        @include respond-stage3-1 {
+            grid-template-areas: "i t";
+        }
+
+        @include respond-stage3-2 {
+            grid-template-areas: "t" "i";
+        }
+    }
+
+    &__header {
+        &::after {
+            display: block;
+            height: .2rem;
+            background-color: $color-secondary;
+            content: " ";
+            width: 20%;
+            margin: 0.7rem 0;
+        }
+    }
+
+    &__text {
+        grid-area: t;
+        align-self: center;
+    }
+
+    &__image {
+        grid-area: i;
+        align-self: center;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.about-page__testimonials {
+    margin: 3rem 0;
+    padding: 10rem 5rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,0.8),
+        rgba($color-primary-dark,0.8)),
+    url("/resources/img/hero.png");
+    color: $color-white;
+
+    & .slick-dots li button:before {
+        color: $color-white;
+    }
+
+    & .slick-dots li.slick-active button:before {
+        color: $color-secondary;
+    }
+}
